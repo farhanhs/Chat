@@ -1,0 +1,48 @@
+def read_file(filename):
+    with open(filename,'r',encoding='utf-8-sig') as f:
+        for line in f:
+            lines.append(line.strip())
+    return lines
+def convert(lines):
+    fix_line = []
+    person = None
+    word_count_allen = 0
+    word_count_vicky = 0
+    sticker_count_allen = 0
+    sticker_count_vicky = 0
+    image_count_allen = 0
+    image_count_vicky = 0
+    for line in lines
+        new = line.split('')
+        time = new[0]
+        name = new[1]
+        if name == 'Allen':
+            if s[2] =='貼圖'：
+                sticker_count_allen += 1
+            else:
+                for m in new[2:]:
+                    word_count_allen += len(m)
+        elif name == 'Vicky':
+            if s[2] =='貼圖'：
+                sticker_count_vicky += 1
+            else:
+                for m in new[2:]:
+                    word_count_vicky += len(m)
+   
+    print('allen說了', word_count_allen, '個字')
+	print('allen傳了', sticker_count_allen, '個貼圖')
+	print('allen傳了',image_count_allen , '張圖片')
+
+	print('viki說了', word_count_vicky, '個字')
+	print('viki傳了', sticker_count_vicky, '個貼圖')
+	print('viki傳了', image_count_vicky, '張圖片')
+def write_file(filename,lines)
+    with open(filename,'w') as f:
+        for line in lines:
+            f.write(line + '\n')
+def main():
+    lines = read_file('LINE-Viki.txt')
+    lines = convert(lines)
+    write_file('output.txt',lines)
+    
+main()
